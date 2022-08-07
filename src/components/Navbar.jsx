@@ -4,7 +4,9 @@ export default function Navbar ({clearItems, items}) {
             <div className="container-fluid">
                 <a className="navbar-brand text-white" href="/#">React Todo App</a>
                 {(items.length > 0) && (
-                    <button onClick={clearItems} className="btn btn-outline-success rounded-1" type="submit">Clear Items</button>
+                    <button onClick={clearItems} className="btn btn-outline-success rounded-1 text-white" type="submit">
+                        Clear Items
+                    </button>
                 )}
             </div>
         </nav>
