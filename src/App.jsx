@@ -12,11 +12,16 @@ export default function App () {
     ])
 
     const addItem = (item) => setItems([...items, item])
-    const deleteItem = (item) => setItems(items.filter((i) => i.id !== item.id))
+
+    const deleteItem = (item) => {
+        if (window.confirm("Delete This Item?")) setItems(items.filter((i) => i.id !== item.id))
+    }
+
     const editItem = (item) => {
         const input = prompt("Update Text:", item.text)
-        if (input.length > 0) setItems(items.map((i) => (i.id === item.id) ? {...i, text: input} : i))
+        if (input) setItems(items.map((i) => (i.id === item.id) ? {...i, text: input} : i))
     }
+
     const clearItems = () => setItems([])
 
     return (
