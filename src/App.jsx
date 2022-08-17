@@ -4,7 +4,7 @@ import List from "./components/List";
 import Navbar from "./components/Navbar";
 
 export default function App () {
-
+    // random comment
     const [items, setItems] = useState([
         { id : 1, text : "Finish the Avengers series" },
         { id : 2, text : "Take my dogs to the vet" },
